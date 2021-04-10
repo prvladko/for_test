@@ -1,7 +1,11 @@
 # args kwargs
-def plus(a, b, *args, **kwargs):
-    print(args)
-    print(kwargs)
-    return a+b
+def plus(*args):
+    result = 0
+    for x in args:
+        result += x
+    return result
 
-plus(1,2,1,1,1,1,2,1,1,12,1,1,1,1, hello=True, goodbye=False, bipbop=4563)
+
+
+summa = plus(1,2,1,1,1,1,2,1,1,12,1,1,1,1)
+print(summa)
