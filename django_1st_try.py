@@ -1,38 +1,21 @@
-# args kwargs
-
-def plus(*args):
-    result = 0
-    for x in args:
-        result += x
-    return result
-
-
-
-summa = plus(1,2,1,1,1,1,2,1,1,12,1,1,1,1)
-print(summa)
-
-# Основы ООП
-
+#Методы part 2
 class Car():
-    wheels = 4
-    doors = 4
-    windows = 4
-    seets = 5
+    def __init__(self, *args, **kwargs):
+        self.wheels = 4
+        self.doors = 4
+        self.windows = 4
+        self.seets = 5
+        self.color = kwargs.get('color', 'black')
+        self.price = kwargs.get('price', 0)
 
-    def start(self):
-        print(self.color)
-        print('Двигатель запущен')
+    def __str__(self):
+        return f'Автомобиль с {self.wheels} колесами'
 
-porsche = Car()
-porsche.color = 'black'
-porsche.start()
+porsche = Car(color='green', price=100000)
 
-ferrari = Car()
-ferrari.color = 'red'
+ferrari = Car(color='red', price=200000)
 
 mini = Car()
-mini.color = 'yellow'
 
-print(mini.color)
-
-#Методы ^^^ part 1
+print(porsche.color, porsche.price)
+print(mini.color, mini.price)
