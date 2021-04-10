@@ -19,8 +19,13 @@ class Car():
     windows = 4
     seets = 5
 
+    def start(self):
+        print(self.color)
+        print('Двигатель запущен')
+
 porsche = Car()
 porsche.color = 'black'
+porsche.start()
 
 ferrari = Car()
 ferrari.color = 'red'
@@ -29,3 +34,5 @@ mini = Car()
 mini.color = 'yellow'
 
 print(mini.color)
+
+#Методы ^^^ part 1
