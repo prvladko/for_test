@@ -18,3 +18,6 @@ def welcome(message):
         keyboard.add(key_tempwind)
     elif message.text == '\help':
         bot.send_message(message.from_user.id, 'Пожалуйста, напечатайте \start')
+
+
+bot.polling()
