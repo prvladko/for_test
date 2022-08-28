@@ -1,4 +1,7 @@
 defmodule RobotSimulator do
+  def module test do
+    bla bla bla
+  end
   @doc """
   Create a Robot Simulator given an initial direction and position.
 
